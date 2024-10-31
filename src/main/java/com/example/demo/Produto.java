@@ -12,7 +12,6 @@ import jakarta.validation.constraints.Size;
 
 
 @Entity
-
 public class Produto {
 
     @Id
@@ -33,6 +32,9 @@ public class Produto {
     @NotNull(message = "A quantidade em estoque é obrigatória")
     @Min(value = 0, message = "A quantidade em estoque não pode ser negativa")
     private Integer quantidadeEmEstoque;
+
+    public Produto() {
+    }
 
     public Produto(
             final Long id,
